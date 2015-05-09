@@ -1,0 +1,7 @@
+platform :ios, "7.0"
+
+inhibit_all_warnings!
+
+pod 'VideoCore', :git => 'https://github.com/TENDIGI/VideoCore.git'
+pod 'IQKeyboardManager', '~> 3.2'
+

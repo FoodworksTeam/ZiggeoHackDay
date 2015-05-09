@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+
 
 @interface ViewController : UIViewController
+
+@property (nonatomic, strong) PFObject *trail;
+@property int trailNumber;
 
 
 @end

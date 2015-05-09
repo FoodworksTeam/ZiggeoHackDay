@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A697838329D77AFFED2FA8DA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD7DEA313FF071BC77B39CD /* libPods.a */; };
 		D04AFF021AFE5B2300C25FDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF011AFE5B2300C25FDD /* main.m */; };
 		D04AFF051AFE5B2300C25FDD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF041AFE5B2300C25FDD /* AppDelegate.m */; };
 		D04AFF081AFE5B2300C25FDD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF071AFE5B2300C25FDD /* ViewController.m */; };
@@ -14,6 +15,28 @@
 		D04AFF0D1AFE5B2300C25FDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D04AFF0C1AFE5B2300C25FDD /* Images.xcassets */; };
 		D04AFF101AFE5B2300C25FDD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04AFF0E1AFE5B2300C25FDD /* LaunchScreen.xib */; };
 		D04AFF1C1AFE5B2300C25FDD /* ZiggeoHackDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF1B1AFE5B2300C25FDD /* ZiggeoHackDayTests.m */; };
+		D04AFF341AFE5F6000C25FDD /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF2C1AFE5F6000C25FDD /* AsyncImageView.m */; };
+		D04AFF351AFE5F6000C25FDD /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF2E1AFE5F6000C25FDD /* VideoPlayer.m */; };
+		D04AFF361AFE5F6000C25FDD /* VideoRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF301AFE5F6000C25FDD /* VideoRecorder.m */; };
+		D04AFF371AFE5F6000C25FDD /* ZiggeoiOsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF331AFE5F6000C25FDD /* ZiggeoiOsSDK.m */; };
+		D04AFF3A1AFE612900C25FDD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF391AFE612900C25FDD /* Parse.framework */; };
+		D04AFF3C1AFE618200C25FDD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF3B1AFE618200C25FDD /* Bolts.framework */; };
+		D04AFF3E1AFE619D00C25FDD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF3D1AFE619D00C25FDD /* AudioToolbox.framework */; };
+		D04AFF401AFE61A300C25FDD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF3F1AFE61A300C25FDD /* CFNetwork.framework */; };
+		D04AFF421AFE61AA00C25FDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF411AFE61AA00C25FDD /* CoreGraphics.framework */; };
+		D04AFF441AFE61AF00C25FDD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF431AFE61AF00C25FDD /* CoreLocation.framework */; };
+		D04AFF461AFE61B900C25FDD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF451AFE61B800C25FDD /* MobileCoreServices.framework */; };
+		D04AFF481AFE61BF00C25FDD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF471AFE61BF00C25FDD /* QuartzCore.framework */; };
+		D04AFF4A1AFE61C800C25FDD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF491AFE61C800C25FDD /* Security.framework */; };
+		D04AFF4C1AFE61D000C25FDD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF4B1AFE61D000C25FDD /* StoreKit.framework */; };
+		D04AFF4E1AFE61DF00C25FDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF4D1AFE61DF00C25FDD /* SystemConfiguration.framework */; };
+		D04AFF501AFE61EC00C25FDD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF4F1AFE61EC00C25FDD /* libz.dylib */; };
+		D04AFF521AFE61F300C25FDD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF511AFE61F300C25FDD /* libsqlite3.dylib */; };
+		D04AFF541AFE61FE00C25FDD /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF531AFE61FE00C25FDD /* Accounts.framework */; };
+		D04AFF561AFE620500C25FDD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AFF551AFE620500C25FDD /* Social.framework */; };
+		D04AFF5A1AFE65D400C25FDD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF591AFE65D400C25FDD /* FirstViewController.m */; };
+		D04AFF5D1AFE664800C25FDD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF5C1AFE664800C25FDD /* LoginViewController.m */; };
+		D04AFF611AFE82F200C25FDD /* CrumbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF601AFE82F200C25FDD /* CrumbViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C5A4BF6FF72359C5C8783B0D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C8F488282A6149F8A37A63B4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CFD7DEA313FF071BC77B39CD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04AFEFC1AFE5B2300C25FDD /* ZiggeoHackDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZiggeoHackDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04AFF001AFE5B2300C25FDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D04AFF011AFE5B2300C25FDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +66,36 @@
 		D04AFF151AFE5B2300C25FDD /* ZiggeoHackDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiggeoHackDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04AFF1A1AFE5B2300C25FDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D04AFF1B1AFE5B2300C25FDD /* ZiggeoHackDayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZiggeoHackDayTests.m; sourceTree = "<group>"; };
+		D04AFF2B1AFE5F6000C25FDD /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		D04AFF2C1AFE5F6000C25FDD /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		D04AFF2D1AFE5F6000C25FDD /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
+		D04AFF2E1AFE5F6000C25FDD /* VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
+		D04AFF2F1AFE5F6000C25FDD /* VideoRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRecorder.h; sourceTree = "<group>"; };
+		D04AFF301AFE5F6000C25FDD /* VideoRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoRecorder.m; sourceTree = "<group>"; };
+		D04AFF311AFE5F6000C25FDD /* ZiggeoiOsSDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZiggeoiOsSDK-Prefix.pch"; sourceTree = "<group>"; };
+		D04AFF321AFE5F6000C25FDD /* ZiggeoiOsSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiggeoiOsSDK.h; sourceTree = "<group>"; };
+		D04AFF331AFE5F6000C25FDD /* ZiggeoiOsSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiggeoiOsSDK.m; sourceTree = "<group>"; };
+		D04AFF391AFE612900C25FDD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		D04AFF3B1AFE618200C25FDD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D04AFF3D1AFE619D00C25FDD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D04AFF3F1AFE61A300C25FDD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D04AFF411AFE61AA00C25FDD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D04AFF431AFE61AF00C25FDD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D04AFF451AFE61B800C25FDD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D04AFF471AFE61BF00C25FDD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D04AFF491AFE61C800C25FDD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D04AFF4B1AFE61D000C25FDD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D04AFF4D1AFE61DF00C25FDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D04AFF4F1AFE61EC00C25FDD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D04AFF511AFE61F300C25FDD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D04AFF531AFE61FE00C25FDD /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		D04AFF551AFE620500C25FDD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D04AFF581AFE65D400C25FDD /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		D04AFF591AFE65D400C25FDD /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		D04AFF5B1AFE664800C25FDD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D04AFF5C1AFE664800C25FDD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D04AFF5F1AFE82F200C25FDD /* CrumbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbViewController.h; sourceTree = "<group>"; };
+		D04AFF601AFE82F200C25FDD /* CrumbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +103,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04AFF561AFE620500C25FDD /* Social.framework in Frameworks */,
+				D04AFF541AFE61FE00C25FDD /* Accounts.framework in Frameworks */,
+				D04AFF521AFE61F300C25FDD /* libsqlite3.dylib in Frameworks */,
+				D04AFF501AFE61EC00C25FDD /* libz.dylib in Frameworks */,
+				D04AFF4E1AFE61DF00C25FDD /* SystemConfiguration.framework in Frameworks */,
+				D04AFF4C1AFE61D000C25FDD /* StoreKit.framework in Frameworks */,
+				D04AFF4A1AFE61C800C25FDD /* Security.framework in Frameworks */,
+				D04AFF481AFE61BF00C25FDD /* QuartzCore.framework in Frameworks */,
+				D04AFF461AFE61B900C25FDD /* MobileCoreServices.framework in Frameworks */,
+				D04AFF441AFE61AF00C25FDD /* CoreLocation.framework in Frameworks */,
+				D04AFF421AFE61AA00C25FDD /* CoreGraphics.framework in Frameworks */,
+				D04AFF401AFE61A300C25FDD /* CFNetwork.framework in Frameworks */,
+				D04AFF3E1AFE619D00C25FDD /* AudioToolbox.framework in Frameworks */,
+				D04AFF3C1AFE618200C25FDD /* Bolts.framework in Frameworks */,
+				D04AFF3A1AFE612900C25FDD /* Parse.framework in Frameworks */,
+				A697838329D77AFFED2FA8DA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +132,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6DD0C6935A572B6FAB6764A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8F488282A6149F8A37A63B4 /* Pods.debug.xcconfig */,
+				C5A4BF6FF72359C5C8783B0D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB93A88008A7595B086370A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D04AFF551AFE620500C25FDD /* Social.framework */,
+				D04AFF531AFE61FE00C25FDD /* Accounts.framework */,
+				D04AFF511AFE61F300C25FDD /* libsqlite3.dylib */,
+				D04AFF4F1AFE61EC00C25FDD /* libz.dylib */,
+				D04AFF4D1AFE61DF00C25FDD /* SystemConfiguration.framework */,
+				D04AFF4B1AFE61D000C25FDD /* StoreKit.framework */,
+				D04AFF491AFE61C800C25FDD /* Security.framework */,
+				D04AFF471AFE61BF00C25FDD /* QuartzCore.framework */,
+				D04AFF451AFE61B800C25FDD /* MobileCoreServices.framework */,
+				D04AFF431AFE61AF00C25FDD /* CoreLocation.framework */,
+				D04AFF411AFE61AA00C25FDD /* CoreGraphics.framework */,
+				D04AFF3F1AFE61A300C25FDD /* CFNetwork.framework */,
+				D04AFF3D1AFE619D00C25FDD /* AudioToolbox.framework */,
+				D04AFF3B1AFE618200C25FDD /* Bolts.framework */,
+				D04AFF391AFE612900C25FDD /* Parse.framework */,
+				CFD7DEA313FF071BC77B39CD /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D04AFEF31AFE5B2300C25FDD = {
 			isa = PBXGroup;
 			children = (
 				D04AFEFE1AFE5B2300C25FDD /* ZiggeoHackDay */,
 				D04AFF181AFE5B2300C25FDD /* ZiggeoHackDayTests */,
 				D04AFEFD1AFE5B2300C25FDD /* Products */,
+				6DD0C6935A572B6FAB6764A1 /* Pods */,
+				BB93A88008A7595B086370A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,8 +187,12 @@
 		D04AFEFE1AFE5B2300C25FDD /* ZiggeoHackDay */ = {
 			isa = PBXGroup;
 			children = (
+				D04AFF5F1AFE82F200C25FDD /* CrumbViewController.h */,
+				D04AFF601AFE82F200C25FDD /* CrumbViewController.m */,
+				D04AFF2A1AFE5F3D00C25FDD /* ZiggeoSDK */,
 				D04AFF031AFE5B2300C25FDD /* AppDelegate.h */,
 				D04AFF041AFE5B2300C25FDD /* AppDelegate.m */,
+				D04AFF571AFE65B200C25FDD /* Welcome */,
 				D04AFF061AFE5B2300C25FDD /* ViewController.h */,
 				D04AFF071AFE5B2300C25FDD /* ViewController.m */,
 				D04AFF091AFE5B2300C25FDD /* Main.storyboard */,
@@ -119,6 +229,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D04AFF2A1AFE5F3D00C25FDD /* ZiggeoSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D04AFF2B1AFE5F6000C25FDD /* AsyncImageView.h */,
+				D04AFF2C1AFE5F6000C25FDD /* AsyncImageView.m */,
+				D04AFF2D1AFE5F6000C25FDD /* VideoPlayer.h */,
+				D04AFF2E1AFE5F6000C25FDD /* VideoPlayer.m */,
+				D04AFF2F1AFE5F6000C25FDD /* VideoRecorder.h */,
+				D04AFF301AFE5F6000C25FDD /* VideoRecorder.m */,
+				D04AFF311AFE5F6000C25FDD /* ZiggeoiOsSDK-Prefix.pch */,
+				D04AFF321AFE5F6000C25FDD /* ZiggeoiOsSDK.h */,
+				D04AFF331AFE5F6000C25FDD /* ZiggeoiOsSDK.m */,
+			);
+			name = ZiggeoSDK;
+			sourceTree = "<group>";
+		};
+		D04AFF571AFE65B200C25FDD /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				D04AFF581AFE65D400C25FDD /* FirstViewController.h */,
+				D04AFF591AFE65D400C25FDD /* FirstViewController.m */,
+				D04AFF5B1AFE664800C25FDD /* LoginViewController.h */,
+				D04AFF5C1AFE664800C25FDD /* LoginViewController.m */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D04AFF1F1AFE5B2300C25FDD /* Build configuration list for PBXNativeTarget "ZiggeoHackDay" */;
 			buildPhases = (
+				F44A0D19E3091684369BE267 /* Check Pods Manifest.lock */,
 				D04AFEF81AFE5B2300C25FDD /* Sources */,
 				D04AFEF91AFE5B2300C25FDD /* Frameworks */,
 				D04AFEFA1AFE5B2300C25FDD /* Resources */,
+				04EBABD12288584A73574C9F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +307,7 @@
 				TargetAttributes = {
 					D04AFEFB1AFE5B2300C25FDD = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = CHMLNGDA6V;
 					};
 					D04AFF141AFE5B2300C25FDD = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -214,14 +354,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04EBABD12288584A73574C9F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F44A0D19E3091684369BE267 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D04AFEF81AFE5B2300C25FDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04AFF611AFE82F200C25FDD /* CrumbViewController.m in Sources */,
 				D04AFF081AFE5B2300C25FDD /* ViewController.m in Sources */,
+				D04AFF361AFE5F6000C25FDD /* VideoRecorder.m in Sources */,
 				D04AFF051AFE5B2300C25FDD /* AppDelegate.m in Sources */,
+				D04AFF371AFE5F6000C25FDD /* ZiggeoiOsSDK.m in Sources */,
 				D04AFF021AFE5B2300C25FDD /* main.m in Sources */,
+				D04AFF5D1AFE664800C25FDD /* LoginViewController.m in Sources */,
+				D04AFF341AFE5F6000C25FDD /* AsyncImageView.m in Sources */,
+				D04AFF351AFE5F6000C25FDD /* VideoPlayer.m in Sources */,
+				D04AFF5A1AFE65D400C25FDD /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,21 +527,37 @@
 		};
 		D04AFF201AFE5B2300C25FDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8F488282A6149F8A37A63B4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ZiggeoHackDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		D04AFF211AFE5B2300C25FDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5A4BF6FF72359C5C8783B0D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ZiggeoHackDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -418,6 +614,7 @@
 				D04AFF211AFE5B2300C25FDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D04AFF221AFE5B2300C25FDD /* Build configuration list for PBXNativeTarget "ZiggeoHackDayTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +623,7 @@
 				D04AFF241AFE5B2300C25FDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
