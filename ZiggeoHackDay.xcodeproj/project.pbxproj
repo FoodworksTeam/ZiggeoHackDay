@@ -37,6 +37,10 @@
 		D04AFF5A1AFE65D400C25FDD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF591AFE65D400C25FDD /* FirstViewController.m */; };
 		D04AFF5D1AFE664800C25FDD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF5C1AFE664800C25FDD /* LoginViewController.m */; };
 		D04AFF611AFE82F200C25FDD /* CrumbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF601AFE82F200C25FDD /* CrumbViewController.m */; };
+		D04AFF641AFEA1DD00C25FDD /* CrumbCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF631AFEA1DD00C25FDD /* CrumbCell.m */; };
+		D04AFF671AFEB50B00C25FDD /* TrailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF661AFEB50B00C25FDD /* TrailsViewController.m */; };
+		D04AFF6A1AFEB5D300C25FDD /* TrailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF691AFEB5D300C25FDD /* TrailCell.m */; };
+		D04AFF6D1AFEC7CD00C25FDD /* OneTrailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AFF6C1AFEC7CD00C25FDD /* OneTrailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,14 @@
 		D04AFF5C1AFE664800C25FDD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D04AFF5F1AFE82F200C25FDD /* CrumbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbViewController.h; sourceTree = "<group>"; };
 		D04AFF601AFE82F200C25FDD /* CrumbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbViewController.m; sourceTree = "<group>"; };
+		D04AFF621AFEA1DD00C25FDD /* CrumbCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbCell.h; sourceTree = "<group>"; };
+		D04AFF631AFEA1DD00C25FDD /* CrumbCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbCell.m; sourceTree = "<group>"; };
+		D04AFF651AFEB50B00C25FDD /* TrailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailsViewController.h; sourceTree = "<group>"; };
+		D04AFF661AFEB50B00C25FDD /* TrailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailsViewController.m; sourceTree = "<group>"; };
+		D04AFF681AFEB5D300C25FDD /* TrailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailCell.h; sourceTree = "<group>"; };
+		D04AFF691AFEB5D300C25FDD /* TrailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailCell.m; sourceTree = "<group>"; };
+		D04AFF6B1AFEC7CD00C25FDD /* OneTrailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTrailViewController.h; sourceTree = "<group>"; };
+		D04AFF6C1AFEC7CD00C25FDD /* OneTrailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTrailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +179,8 @@
 		D04AFEF31AFE5B2300C25FDD = {
 			isa = PBXGroup;
 			children = (
+				D04AFF6B1AFEC7CD00C25FDD /* OneTrailViewController.h */,
+				D04AFF6C1AFEC7CD00C25FDD /* OneTrailViewController.m */,
 				D04AFEFE1AFE5B2300C25FDD /* ZiggeoHackDay */,
 				D04AFF181AFE5B2300C25FDD /* ZiggeoHackDayTests */,
 				D04AFEFD1AFE5B2300C25FDD /* Products */,
@@ -189,6 +203,8 @@
 			children = (
 				D04AFF5F1AFE82F200C25FDD /* CrumbViewController.h */,
 				D04AFF601AFE82F200C25FDD /* CrumbViewController.m */,
+				D04AFF681AFEB5D300C25FDD /* TrailCell.h */,
+				D04AFF691AFEB5D300C25FDD /* TrailCell.m */,
 				D04AFF2A1AFE5F3D00C25FDD /* ZiggeoSDK */,
 				D04AFF031AFE5B2300C25FDD /* AppDelegate.h */,
 				D04AFF041AFE5B2300C25FDD /* AppDelegate.m */,
@@ -196,9 +212,13 @@
 				D04AFF061AFE5B2300C25FDD /* ViewController.h */,
 				D04AFF071AFE5B2300C25FDD /* ViewController.m */,
 				D04AFF091AFE5B2300C25FDD /* Main.storyboard */,
+				D04AFF651AFEB50B00C25FDD /* TrailsViewController.h */,
+				D04AFF661AFEB50B00C25FDD /* TrailsViewController.m */,
 				D04AFF0C1AFE5B2300C25FDD /* Images.xcassets */,
 				D04AFF0E1AFE5B2300C25FDD /* LaunchScreen.xib */,
 				D04AFEFF1AFE5B2300C25FDD /* Supporting Files */,
+				D04AFF621AFEA1DD00C25FDD /* CrumbCell.h */,
+				D04AFF631AFEA1DD00C25FDD /* CrumbCell.m */,
 			);
 			path = ZiggeoHackDay;
 			sourceTree = "<group>";
@@ -395,9 +415,13 @@
 				D04AFF611AFE82F200C25FDD /* CrumbViewController.m in Sources */,
 				D04AFF081AFE5B2300C25FDD /* ViewController.m in Sources */,
 				D04AFF361AFE5F6000C25FDD /* VideoRecorder.m in Sources */,
+				D04AFF671AFEB50B00C25FDD /* TrailsViewController.m in Sources */,
 				D04AFF051AFE5B2300C25FDD /* AppDelegate.m in Sources */,
 				D04AFF371AFE5F6000C25FDD /* ZiggeoiOsSDK.m in Sources */,
+				D04AFF6D1AFEC7CD00C25FDD /* OneTrailViewController.m in Sources */,
+				D04AFF641AFEA1DD00C25FDD /* CrumbCell.m in Sources */,
 				D04AFF021AFE5B2300C25FDD /* main.m in Sources */,
+				D04AFF6A1AFEB5D300C25FDD /* TrailCell.m in Sources */,
 				D04AFF5D1AFE664800C25FDD /* LoginViewController.m in Sources */,
 				D04AFF341AFE5F6000C25FDD /* AsyncImageView.m in Sources */,
 				D04AFF351AFE5F6000C25FDD /* VideoPlayer.m in Sources */,
@@ -530,6 +554,7 @@
 			baseConfigurationReference = C8F488282A6149F8A37A63B4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -548,6 +573,7 @@
 			baseConfigurationReference = C5A4BF6FF72359C5C8783B0D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

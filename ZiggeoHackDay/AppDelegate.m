@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "ZiggeoiOsSDK.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface AppDelegate () <CLLocationManagerDelegate>
 
@@ -49,7 +50,13 @@
     _locManager.delegate = self;
     _locManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
     _locManager.desiredAccuracy = kCLLocationAccuracyBest; // 100 m
+    [_locManager requestWhenInUseAuthorization];
+    
+    _currentLocation = [_locManager location];
     [_locManager startUpdatingLocation];
+    
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -62,12 +69,14 @@
 #pragma mark locationManager delegate methods
 
 
-- (void)locationManager: (CLLocationManager *)manager
-    didUpdateToLocation: (CLLocation *)newLocation
-           fromLocation: (CLLocation *)oldLocation
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations
 {
+    NSLog(@"Location update");
+    CLLocation *newLocation = [locations lastObject];
     _currentLocation = newLocation;
 }
+
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {

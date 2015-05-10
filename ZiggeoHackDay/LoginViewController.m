@@ -7,8 +7,12 @@
 //
 
 #import "LoginViewController.h"
+#import <Parse/Parse.h>
 
 @interface LoginViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -24,6 +28,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)login:(id)sender {
+    
+//    [PFUser logInWithUsername:_usernameField.text password:_passwordField.text
+    [PFUser logInWithUsernameInBackground:_usernameField.text password:_passwordField.text block:^(PFUser *user, NSError *error) {
+        if(user)
+        {
+            //Go to the app.
+            [self performSegueWithIdentifier:@"showApp" sender:self];
+        }
+    }];
 }
 
 /*

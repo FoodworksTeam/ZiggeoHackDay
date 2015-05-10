@@ -18,15 +18,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIImageView *background = [[UIImageView alloc] initWithFrame:self.view.frame];
+    background.image = [UIImage imageNamed:@"LaunchImage"];
+    [self.view addSubview:background];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
     
     if([PFUser currentUser]) {
         //Load the view controller.
+        [self performSegueWithIdentifier:@"showApp" sender:self];
         
     } else {
         //Load the login screen.
+        [self performSegueWithIdentifier:@"showLogin" sender:self];
         
     }
-    
 }
 
 - (void)didReceiveMemoryWarning {

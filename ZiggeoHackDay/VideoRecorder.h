@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VCSimpleSession.h"
+
 
 @protocol VideoRecorderDelegate <NSObject>
 - (void) onUploadCompleteWithVideoToken:(NSString*)vt andImage:(UIImage*)img;
@@ -18,5 +20,7 @@ NSString *STREAM_TOKEN;
 }
 
 @property (weak, nonatomic) id<VideoRecorderDelegate> delegate;
+@property (nonatomic, retain) VCSimpleSession* session;
+
 
 @end

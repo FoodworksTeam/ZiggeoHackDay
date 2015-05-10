@@ -12,8 +12,6 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic, strong) PFObject *trail;
-@property int trailNumber;
 
 
 @end

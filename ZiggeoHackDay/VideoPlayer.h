@@ -11,5 +11,5 @@
 @interface VideoPlayer : UIView
 
 -(void)setVideoToken:(NSString*)video_token;
-
+@property (nonatomic, strong) UIViewController *vc;
 @end

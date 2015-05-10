@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-UriParser-cpp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0FBF42987C739C2F18D6F0E4</key>
+		<key>141B1F90FF4F8F2225B80877</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8059982E8882ECD955238586</key>
+		<key>2B4CBF114362344E79C29EAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C890FF30BBF1ABAACD351D60</key>
+		<key>6746225833FA93697956EA66</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D0563B24A307F09701A256EA</key>
+		<key>9E6DE3272945B82A204992C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D2093D6D3DCB6D8407B22EEA</key>
+		<key>A3F5DA334F54CED72369DAF0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E254D7A87EAFD12D94068D21</key>
+		<key>E77C792BE4B78EE58652DAD5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F51CD7C18EF0F7F3ACCCDA55</key>
 		<dict>
 			<key>primary</key>
 			<true/>

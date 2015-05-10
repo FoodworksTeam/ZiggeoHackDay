@@ -12,7 +12,6 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface VideoRecorder () <VCSessionDelegate>
-    @property (nonatomic, retain) VCSimpleSession* session;
     @property (nonatomic, assign) int recordingDuration;
 @end
 
@@ -26,7 +25,10 @@
     UIButton *_buttonFlash;
     UIButton *_buttonStart;
     UIButton *_buttonCamera;
-    
+    UIView *_loadingView;
+    UILabel *_loadingLabel;
+    UIActivityIndicatorView *_loadingIndicator;
+
 }
 
 
@@ -47,16 +49,16 @@
         _session.delegate = self;
 
         // Initialize Views
-        _buttonFlash = [[UIButton alloc] initWithFrame:CGRectMake([self frame].size.width - 96, [self frame].size.height - 96, 96, 96)];
-        [_buttonFlash setImage:[UIImage imageNamed:@"ic_flash_on_holo_light.png"] forState:UIControlStateNormal];
-        [_buttonFlash addTarget:self action:@selector(toggleFlash) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_buttonFlash];
-        _buttonStart = [[UIButton alloc] initWithFrame:CGRectMake(([self frame].size.width - 96) / 2, [self frame].size.height - 96, 96, 96)];
-        [_buttonStart setImage:[UIImage imageNamed:@"ic_switch_video.png"] forState:UIControlStateNormal];
+//        _buttonFlash = [[UIButton alloc] initWithFrame:CGRectMake([self frame].size.width - 96, [self frame].size.height - 96 - 49, 96, 96)];
+//        [_buttonFlash setImage:[UIImage imageNamed:@"ic_flash_on_holo_light.png"] forState:UIControlStateNormal];
+//        [_buttonFlash addTarget:self action:@selector(toggleFlash) forControlEvents:UIControlEventTouchUpInside];
+//        [self addSubview:_buttonFlash];
+        _buttonStart = [[UIButton alloc] initWithFrame:CGRectMake(([self frame].size.width - 96) / 2, [self frame].size.height - 96 - 49, 96, 96)];
+        [_buttonStart setImage:[UIImage imageNamed:@"record-unpressed"] forState:UIControlStateNormal];
         [_buttonStart addTarget:self action:@selector(toggleStream) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_buttonStart];
-        _buttonCamera = [[UIButton alloc] initWithFrame:CGRectMake(0, [self frame].size.height - 96, 96, 96)];
-        [_buttonCamera setImage:[UIImage imageNamed:@"ic_switch_photo_facing_holo_light.png"] forState:UIControlStateNormal];
+        _buttonCamera = [[UIButton alloc] initWithFrame:CGRectMake(15, 15, 56, 56)];
+        [_buttonCamera setImage:[UIImage imageNamed:@"ios7-camera-outline"] forState:UIControlStateNormal];
         [_buttonCamera addTarget:self action:@selector(switchCamera) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_buttonCamera];
         
@@ -74,9 +76,33 @@
              if ([device hasTorch] && [device hasFlash])
                     [_buttonFlash setEnabled:YES];
          }
+        
+        [self setUpLoadingView];
     }
     return self;
 }
+
+
+- (void)setUpLoadingView
+{
+    _loadingView = [[UIView alloc] initWithFrame:CGRectMake(20, 200, self.frame.size.width - 40, 200)];
+    _loadingView.backgroundColor = [UIColor blackColor];
+    _loadingView.alpha = .7;
+    _loadingView.layer.cornerRadius = 10.0;
+    
+    _loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    _loadingIndicator.frame = CGRectMake(0, 20, _loadingView.frame.size.width, 60);
+    [_loadingView addSubview:_loadingIndicator];
+    
+    _loadingLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, _loadingView.frame.size.width - 20, 40)];
+    _loadingLabel.font = [UIFont boldSystemFontOfSize:22];
+    _loadingLabel.textColor = [UIColor whiteColor];
+    _loadingLabel.textAlignment = NSTextAlignmentCenter;
+    _loadingLabel.numberOfLines = 0;
+    _loadingLabel.text = @"Preparing to Record...";
+    [_loadingView addSubview:_loadingLabel];
+}
+
 
 - (void)toggleFlash {
     
@@ -117,6 +143,9 @@
             // Once session has started, start countdown timer
         case VCSessionStateStarted:
             NSLog(@"VCSessionStream Started");
+            // Stream started.
+            [self updateViewForStart];
+            
             if (_recordingDuration)
                 [self performSelector:@selector(stopStream) withObject:nil afterDelay:_recordingDuration];
             break;
@@ -131,6 +160,7 @@
             // the onItemClick method, hence nothing more need to be done
             // here. In the latter case, a spinner has been shown instead,
             // that we need to stop here and then display the player
+            [self updateViewForStopped];
             hasUploadEnded = TRUE;
             [self resetStream];
             if (self.delegate)
@@ -139,6 +169,18 @@
             
         default: break;
     }
+}
+
+- (void)updateViewForStart
+{
+    [_loadingView removeFromSuperview];
+    [_buttonStart setImage:[UIImage imageNamed:@"record-pressed"] forState:UIControlStateNormal];
+}
+
+- (void)updateViewForStopped
+{
+    [_loadingView removeFromSuperview];
+    [_buttonStart setImage:[UIImage imageNamed:@"record-unpressed"] forState:UIControlStateNormal];
 }
 
 
@@ -152,10 +194,12 @@
     
     switch(_session.rtmpSessionState) {
         case VCSessionStatePreviewStarted:
+            [self addLoadingView];
             [self retrieveTokens];
             canRotate = FALSE;
             break;
         case VCSessionStateEnded:
+            [self addLoadingView];
             isInitialStream = YES;
             [self retrieveTokens];
             canRotate = FALSE;
@@ -163,6 +207,12 @@
         default:
             [self stopStream]; break;
     }
+}
+
+- (void)addLoadingView
+{
+    [_loadingIndicator startAnimating];
+    [self addSubview:_loadingView];
 }
 
 - (void) retrieveTokens {

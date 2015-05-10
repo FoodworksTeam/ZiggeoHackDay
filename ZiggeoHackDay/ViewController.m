@@ -15,6 +15,9 @@
 
 @interface ViewController () <VideoRecorderDelegate>
 
+@property (nonatomic, strong) VideoRecorder *recorderview;
+
+@property (nonatomic, strong) EAGLContext* context;
 @end
 
 @implementation ViewController
@@ -23,10 +26,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    VideoRecorder *recorderview = [[VideoRecorder alloc] initWithFrame:self.view.frame];
-    recorderview.delegate = self;
-    [self.view addSubview:recorderview];
+    //Make an popover view.  That goes once they hit start?
     
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+//    [_recorderview.session endRtmpSession];
+    [super viewWillDisappear:animated];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    
+    _recorderview = [[VideoRecorder alloc] initWithFrame:self.view.frame];
+    _recorderview.delegate = self;
+    [self.view addSubview:_recorderview];
+    
+    
+    [super viewWillAppear:animated];
     
 }
 
@@ -35,30 +55,59 @@
 - (void) onUploadCompleteWithVideoToken:(NSString*)vt andImage:(UIImage*)img
 {
     // Show refresh control and disable stuff.
-    
-    
-    
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
-    PFObject *video = [PFObject objectWithClassName:@"Video"];
-    [video setObject:vt forKey:@"ZVideoToken"];
-
-    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:appDelegate.currentLocation];
-    if(geoPoint) {
-        [video setObject:geoPoint forKey:@"location"];
-    }
-    
-    [video saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(!error) {
-            //Lets save it to the trail.
-            PFRelation *crumbs = [_trail relationForKey:@"crumbs"];
-            
-            
+    if(vt) {
+        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        
+        PFObject *video = [PFObject objectWithClassName:@"Video"];
+        [video setObject:vt forKey:@"ZVideoToken"];
+        
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:appDelegate.currentLocation];
+        if(geoPoint) {
+            [video setObject:geoPoint forKey:@"location"];
         }
-    }];
-    
-//    NSLog(@"UploadCompleteWithVideoToken");
-//    NSLog(vt);
+        
+        
+        [video saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if(succeeded) {
+                //Lets save it to the trail.
+                
+                PFObject *trail = [[PFUser currentUser] objectForKey:@"trail"];
+                
+                if(!trail)
+                {
+                    //Firs time.
+                    PFObject *trail = [PFObject objectWithClassName:@"Trail"];
+                    [trail saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                        [[PFUser currentUser] setObject:trail forKey:@"trail"];
+                        [[PFUser currentUser] saveInBackground];
+                        
+                        PFRelation *crumbs = [trail relationForKey:@"crumbs"];
+                        
+                        [crumbs addObject:video];
+                        [trail saveInBackground];
+                        
+                    }];
+                }
+                
+                
+                
+                PFRelation *crumbs = [trail relationForKey:@"crumbs"];
+                
+                
+                [crumbs addObject:video];
+                
+                
+                [trail saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    
+                    
+                    
+                    
+                }];
+                
+            }
+        }];
+    }
+
 }
 
 

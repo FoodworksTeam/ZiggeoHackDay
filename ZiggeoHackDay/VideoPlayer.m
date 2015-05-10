@@ -33,6 +33,13 @@ NSString *token;
         [playbutton setImage:[UIImage imageNamed:@"button_play_solid"] forState:UIControlStateNormal];
         [playbutton addTarget:self action:@selector(play) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:playbutton];
+        
+        UIButton *closeButton = [[UIButton alloc] initWithFrame:CGRectMake(5, 25, 30, 30)];
+        [closeButton setTitle:@"X" forState:UIControlStateNormal];
+        closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:20];
+        [closeButton addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchDown];
+        closeButton.titleLabel.textColor = [UIColor blackColor];
+        [self addSubview:closeButton];
     }
     return self;
 }
@@ -46,8 +53,13 @@ NSString *token;
 
 - (void)play
 {
-    [self.window.rootViewController presentMoviePlayerViewControllerAnimated:movieController];
+    [self.vc presentMoviePlayerViewControllerAnimated:movieController];
     [movieController.moviePlayer play];
+}
+
+- (void)dismiss
+{
+    [self removeFromSuperview];
 }
 
 @end
